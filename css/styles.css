@@ -1,0 +1,148 @@
+/* =========================
+   BASE
+========================= */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* =========================
+   CONTENEDOR APP
+========================= */
+.app {
+  width: 100%;
+  max-width: 380px;
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* =========================
+   FORMULARIO
+========================= */
+form {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+input {
+  flex: 1;
+  min-width: 150px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #4f8cff;
+}
+
+/* =========================
+   BOTÓN
+========================= */
+button {
+  padding: 12px 15px;
+  border: none;
+  background: #4f8cff;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  flex: 0 0 auto;
+}
+
+button:hover {
+  background: #3b74e6;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 14px;
+  background: white;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.4s ease;
+}
+
+.temp {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.desc {
+  color: #555;
+  margin-top: 5px;
+}
+
+/* =========================
+   ERROR
+========================= */
+.error {
+  color: #ff3b3b;
+  font-weight: bold;
+}
+
+/* =========================
+   ANIMACIÓN
+========================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE (MÓVIL)
+========================= */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .app {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .temp {
+    font-size: 28px;
+  }
+}
